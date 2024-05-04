@@ -1,0 +1,266 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Home page styles */
+.hero {
+    background-image: url('preethi.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    filter: brightness(70%);
+    align-items: center;
+}
+
+.hero-content {
+    text-align: left;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    margin-left: 2rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+/* About page styles */
+.about {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about .skills {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about .skills i {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #ff9900;
+}
+
+/* Contact page styles */
+.contact {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact .social-icons {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.contact .social-icons li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.contact .social-icons li a i {
+    font-size: 2rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.contact .social-icons li a i:hover {
+    color: #ff9900;
+}
+
+.contact button {
+    padding: 15px 30px;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #e68a00;
+}
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    max-width: 400px;
+    width: 90%;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popup.active {
+    display: block;
+    opacity: 1;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #888;
+}
+
+.close:hover {
+    color: #555;
+}
+
+.popup h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup label {
+    margin-bottom: 10px;
+}
+
+.popup input,
+.popup textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.popup input[type="submit"] {
+    padding: 15px;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.popup input[type="submit"]:hover {
+    background-color: #e68a00;
+}
+
+/* Overlay styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.popup.active + .popup-overlay {
+    display: block;
+}
